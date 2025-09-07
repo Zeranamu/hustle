@@ -1,0 +1,15 @@
+{
+	"friendly_name": "Yharim, God seeker",
+	"name": "Yharim",
+	"description": " Yharim is as if from a quote, He dosen't fear gods, gods fear him",
+	"version": "0.1",
+	"author": "Catbox",
+	"client_side": false,
+	"overwrites": false,
+	"requires": [
+		"char_loader"
+	],
+	"priority": 0,
+	"id": 123456912345,
+	"link": ""
+}

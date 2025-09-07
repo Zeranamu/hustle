@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/c73d6195-fed1-4f1f-bbe4-f723058ee952.png" type="Texture" id=1]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/YharimBodylightning.png" type="Texture" id=2]
+[ext_resource path="res://fx/ParticleEffect.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=4]
+
+[sub_resource type="ShaderMaterial" id=584]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=585]
+particles_animation = true
+particles_anim_h_frames = 9
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=586]
+min_value = 0.1
+_data = [ Vector2( 0, 0.168523 ), 0.0, 0.287431, 0, 0, Vector2( 1, 0.512159 ), 0.115981, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=587]
+interpolation_mode = 1
+offsets = PoolRealArray( 0, 0.0670391, 0.162011, 0.251397, 0.47486, 0.547486, 0.614525, 0.681564, 0.776536, 0.837989, 0.899441, 1 )
+colors = PoolColorArray( 0, 1, 1, 1, 1, 0.04, 0.04, 0.96, 1, 0, 0, 0.861026, 0.08, 0.978437, 1, 0.92, 1, 0.172, 0.172, 0.828, 1, 0.2916, 0.2916, 0.7084, 1, 0.402, 0.402, 0.598, 1, 0.5124, 0.5124, 0.4876, 1, 0.6504, 0.6504, 0.3496, 1, 0.757222, 0.757222, 0.242778, 1, 0.864045, 0.864045, 0.135955, 1, 1, 1, 0 )
+
+[node name="ParticleEffect" instance=ExtResource( 3 )]
+material = SubResource( 584 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Shock" type="CPUParticles2D" parent="." index="1"]
+material = SubResource( 585 )
+amount = 1
+speed_scale = 4.0
+texture = ExtResource( 2 )
+gravity = Vector2( 0, 0 )
+scale_amount = 0.3
+color = Color( 1, 0, 0, 1 )
+anim_speed = 1.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." index="2"]
+material = SubResource( 585 )
+scale = Vector2( -1, 1 )
+amount = 1
+speed_scale = 4.0
+texture = ExtResource( 2 )
+gravity = Vector2( 0, 0 )
+scale_amount = 0.3
+color = Color( 0, 0.882353, 1, 1 )
+anim_speed = 1.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Circle" type="CPUParticles2D" parent="." index="3"]
+amount = 1
+speed_scale = 6.0
+texture = ExtResource( 1 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 720.0
+scale_amount_curve = SubResource( 586 )
+color_ramp = SubResource( 587 )

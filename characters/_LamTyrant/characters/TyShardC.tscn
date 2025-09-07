@@ -1,0 +1,167 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://_LamTyrant/characters/TyProps.gd" type="Script" id=1]
+[ext_resource path="res://addons/collision_box/CollisionBox.gd" type="Script" id=2]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=3]
+[ext_resource path="res://theme.tres" type="Theme" id=4]
+[ext_resource path="res://mechanics/Hitbox.gd" type="Script" id=5]
+[ext_resource path="res://framework/FiniteStateMachine/StateMachine.gd" type="Script" id=6]
+[ext_resource path="res://characters/BoxDraw.gd" type="Script" id=7]
+[ext_resource path="res://projectile/IndicatorDraw.gd" type="Script" id=8]
+[ext_resource path="res://_LamTyrant/characters/TyPropsSub.gd" type="Script" id=9]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sfx/TyShardHit.wav" type="AudioStream" id=10]
+[ext_resource path="res://_LamTyrant/characters/Assets/TyProps.tres" type="SpriteFrames" id=11]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sfx/TySlash1.wav" type="AudioStream" id=12]
+[ext_resource path="res://_LamTyrant/characters/Assets/Fx/TyHitFx1.tscn" type="PackedScene" id=13]
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 3 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[node name="Icicle" type="Node2D"]
+material = SubResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Big2"
+}
+gravity = "0.3"
+ground_friction = "0.2"
+max_ground_speed = "10"
+max_fall_speed = "10"
+extra_state_variables = "scale
+realtick
+hp
+abslife
+icecount
+shard
+hitter"
+has_projectile_parry_window = false
+deletes_other_projectiles = false
+apply_hitlag_when_hit_by_melee = false
+projectile_immune = true
+
+[node name="Flip" type="Node2D" parent="."]
+
+[node name="Sprite" type="AnimatedSprite" parent="Flip"]
+unique_name_in_owner = true
+frames = ExtResource( 11 )
+animation = "ShardB"
+speed_scale = 4.0
+
+[node name="Particles" type="Node2D" parent="Flip"]
+unique_name_in_owner = true
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="CollisionBox" type="Node2D" parent="."]
+z_index = 1000
+script = ExtResource( 2 )
+width = 22
+height = 22
+
+[node name="Hurtbox" type="Node2D" parent="."]
+z_index = 1000
+script = ExtResource( 2 )
+width = 22
+height = 22
+
+[node name="StateMachine" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="ShardB" type="Node2D" parent="StateMachine"]
+script = ExtResource( 9 )
+__meta__ = {
+"_editor_description_": ""
+}
+apply_forces = true
+apply_fric = true
+apply_grav = true
+fallback_state = "ShardC"
+sprite_animation = "ShardB"
+anim_length = 40
+ticks_per_frame = 3
+state_screenshake_dir = Vector2( 1, 0 )
+sfx_volume = 2.0
+
+[node name="ShardC" type="Node2D" parent="StateMachine"]
+script = ExtResource( 9 )
+__meta__ = {
+"_editor_description_": ""
+}
+apply_forces = true
+apply_fric = true
+apply_grav = true
+fallback_state = "ShardC"
+anim_length = 100
+ticks_per_frame = 3
+sfx_volume = 2.0
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/ShardC"]
+z_index = 1000
+script = ExtResource( 5 )
+width = 16
+height = 16
+damage = 10
+minimum_damage = 10
+chip_damage_modifier = "0.15"
+hitbox_type = 5
+hitstun_ticks = 10
+hitlag_ticks = 1
+victim_hitlag = 10
+combo_scaling_amount = 2
+cancellable = false
+can_counter_hit = false
+di_modifier = "0.8"
+sdi_modifier = "0"
+meter_gain_modifier = "0.6"
+can_clash = false
+block_cancel_allowed = false
+screenshake_frames = 6
+hit_particle = ExtResource( 13 )
+replace_hit_particle = true
+whiff_sound = ExtResource( 10 )
+hit_sound = ExtResource( 12 )
+whiff_sound_volume = -99.0
+hit_sound_volume = -4.0
+dir_x = "1"
+dir_y = "-0.4"
+knockback = "6"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+knockdown_extends_hitstun = false
+disable_collision = false
+air_ground_bounce = true
+start_tick = 1
+active_ticks = 200
+
+[node name="BoxDraw" type="Node2D" parent="."]
+visible = false
+z_index = 4096
+script = ExtResource( 7 )
+
+[node name="IndicatorDraw" type="Node2D" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+z_index = 4096
+script = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="IndicatorDraw"]
+margin_left = -20.0
+margin_top = -16.0
+margin_right = 20.0
+margin_bottom = 15.0
+theme = ExtResource( 4 )
+text = "P1"
+align = 1
+valign = 1

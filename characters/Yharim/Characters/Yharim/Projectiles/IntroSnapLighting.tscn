@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://projectile/BaseProjectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=2]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/IntroLightningOverChargePorjEffect.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Yharim/Characters/Yharim/Sounds/Bolt.wav" type="AudioStream" id=5]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 2 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[node name="OCLighting" instance=ExtResource( 1 )]
+always_parriable = true
+free_cancel_on_hit = true
+
+[node name="Sprite" parent="Flip" index="0"]
+frames = SubResource( 2 )
+
+[node name="ParticleEffect2" parent="Flip/Particles" index="0" instance=ExtResource( 3 )]
+material = SubResource( 3 )
+position = Vector2( 0, -230 )
+
+[node name="CollisionBox" parent="." index="2"]
+y = -70
+width = 10
+height = 70
+
+[node name="Hurtbox" parent="." index="3"]
+__meta__ = {
+"_editor_description_": ""
+}
+y = -70
+width = 5
+height = 64
+
+[node name="Default" parent="StateMachine" index="0"]
+__meta__ = {
+"_editor_description_": ""
+}
+apply_forces = true
+apply_fric = true
+anim_length = 20
+ticks_per_frame = 2
+state_screenshake_tick = 1
+state_screenshake_amount = 20
+sfx = ExtResource( 5 )
+sfx_tick = 4
+sfx_volume = -5.0
+move_x = 0
+num_hits = 500
+lifetime = 20
+fizzle_on_ground = false
+fizzle_on_walls = false

@@ -1,0 +1,106 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://projectile/BaseProjectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=2]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/LightningOverChargePorjEffect.tscn" type="PackedScene" id=3]
+[ext_resource path="res://mechanics/Hitbox.gd" type="Script" id=4]
+[ext_resource path="res://Yharim/Characters/Yharim/Sounds/Bolt.wav" type="AudioStream" id=5]
+[ext_resource path="res://Yharim/Characters/Yharim/Sounds/ExobladeDashImpact.wav" type="AudioStream" id=6]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 2 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[node name="OCLighting" instance=ExtResource( 1 )]
+always_parriable = true
+free_cancel_on_hit = true
+
+[node name="Sprite" parent="Flip" index="0"]
+frames = SubResource( 2 )
+
+[node name="ParticleEffect" parent="Flip/Particles" index="0" instance=ExtResource( 3 )]
+material = SubResource( 1 )
+position = Vector2( 0, -232 )
+
+[node name="CollisionBox" parent="." index="2"]
+y = -70
+width = 10
+height = 70
+
+[node name="Hurtbox" parent="." index="3"]
+__meta__ = {
+"_editor_description_": ""
+}
+y = -70
+width = 5
+height = 64
+
+[node name="Default" parent="StateMachine" index="0"]
+__meta__ = {
+"_editor_description_": ""
+}
+apply_forces = true
+apply_fric = true
+anim_length = 20
+ticks_per_frame = 2
+sfx = ExtResource( 5 )
+sfx_tick = 4
+sfx_volume = -5.0
+move_x = 0
+num_hits = 500
+lifetime = 20
+fizzle_on_ground = false
+fizzle_on_walls = false
+
+[node name="Hitbox2" type="Node2D" parent="StateMachine/Default" index="0"]
+z_index = 1000
+script = ExtResource( 4 )
+y = -170
+width = 28
+height = 170
+damage = 50
+minimum_damage = 35
+chip_damage_modifier = "0.0"
+hitbox_type = 5
+hitstun_ticks = 10
+hitlag_ticks = 5
+scale_combo = false
+combo_scaling_amount = 0
+increment_combo = false
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+meter_gain_modifier = "0.2"
+hit_height = 0
+screenshake_amount = 6
+whiff_sound = ExtResource( 5 )
+hit_sound = ExtResource( 5 )
+hit_bass_sound = ExtResource( 6 )
+bass_sound_volume = -8.0
+dir_x = "0.0"
+dir_y = "-0.0"
+knockback = "0.0"
+block_pushback_modifier = "0.2"
+block_reverse_pushback_modifier = "0.2"
+pushback_x = "0.0"
+ground_bounce = false
+start_tick = 2
+active_ticks = 2

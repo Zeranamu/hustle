@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Terraria Calamity Mod Music - The Tale of a Cruel World - Title Theme (1).wav-5810347f68836110d4e1b1d06346fd2c.sample"
+
+[deps]
+
+source_file="res://Yharim/Characters/Yharim/Sounds/Terraria Calamity Mod Music - The Tale of a Cruel World - Title Theme (1).wav"
+dest_files=[ "res://.import/Terraria Calamity Mod Music - The Tale of a Cruel World - Title Theme (1).wav-5810347f68836110d4e1b1d06346fd2c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

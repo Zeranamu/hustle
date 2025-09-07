@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/HellkiteFullCharge.ogg-8f6d07de555aef45ff364cfa4068996e.oggstr"
+
+[deps]
+
+source_file="res://Yharim/Characters/Yharim/Sounds/HellkiteFullCharge.ogg"
+dest_files=[ "res://.import/HellkiteFullCharge.ogg-8f6d07de555aef45ff364cfa4068996e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

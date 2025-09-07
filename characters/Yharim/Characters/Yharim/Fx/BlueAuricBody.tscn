@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=1]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/YharimBodylightning.png" type="Texture" id=2]
+[ext_resource path="res://fx/ParticleEffect.tscn" type="PackedScene" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=2]
+particles_animation = true
+particles_anim_h_frames = 9
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=4]
+interpolation_mode = 1
+offsets = PoolRealArray( 0, 0.849398 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.614458, 0.849398 )
+colors = PoolColorArray( 0, 0.938477, 1, 1, 1, 1, 1, 1, 0, 0.705232, 0.751465, 1 )
+
+[node name="BlueAuricBody" instance=ExtResource( 3 )]
+material = SubResource( 1 )
+one_shot = false
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." index="1"]
+material = SubResource( 2 )
+scale = Vector2( 0.5, 0.5 )
+amount = 1
+texture = ExtResource( 2 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1, 22 )
+gravity = Vector2( 0, 0 )
+angle_random = 1.0
+scale_amount = 0.5
+color = Color( 0, 0.960784, 1, 0.654902 )
+color_ramp = SubResource( 4 )
+color_initial_ramp = SubResource( 3 )
+anim_speed = 1.0

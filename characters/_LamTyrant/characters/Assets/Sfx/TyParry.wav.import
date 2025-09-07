@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/TyParry.wav-3c56557cbb766e3de0de97c5f435e4ee.sample"
+
+[deps]
+
+source_file="res://_LamTyrant/characters/Assets/Sfx/TyParry.wav"
+dest_files=[ "res://.import/TyParry.wav-3c56557cbb766e3de0de97c5f435e4ee.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

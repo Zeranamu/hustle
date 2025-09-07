@@ -1,0 +1,569 @@
+[gd_resource type="SpriteFrames" load_steps=245 format=2]
+
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant56.png" type="Texture" id=1]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant65.png" type="Texture" id=2]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant192.png" type="Texture" id=3]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant58.png" type="Texture" id=4]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant9.png" type="Texture" id=5]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant190.png" type="Texture" id=6]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant25.png" type="Texture" id=7]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant194.png" type="Texture" id=8]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant8.png" type="Texture" id=9]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant198.png" type="Texture" id=10]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant49.png" type="Texture" id=11]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant50.png" type="Texture" id=12]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant48.png" type="Texture" id=13]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant51.png" type="Texture" id=14]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant200.png" type="Texture" id=15]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant193.png" type="Texture" id=16]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant52.png" type="Texture" id=17]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant60.png" type="Texture" id=18]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant23.png" type="Texture" id=19]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant10.png" type="Texture" id=20]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant61.png" type="Texture" id=21]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant2.png" type="Texture" id=22]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant55.png" type="Texture" id=23]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant67.png" type="Texture" id=24]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant199.png" type="Texture" id=25]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant62.png" type="Texture" id=26]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant196.png" type="Texture" id=27]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant24.png" type="Texture" id=28]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant191.png" type="Texture" id=29]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant53.png" type="Texture" id=30]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant197.png" type="Texture" id=31]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant11.png" type="Texture" id=32]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant64.png" type="Texture" id=33]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant66.png" type="Texture" id=34]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant57.png" type="Texture" id=35]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant5.png" type="Texture" id=36]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant4.png" type="Texture" id=37]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant6.png" type="Texture" id=38]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant42.png" type="Texture" id=39]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant43.png" type="Texture" id=40]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant29.png" type="Texture" id=41]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant36.png" type="Texture" id=42]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant32.png" type="Texture" id=43]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant44.png" type="Texture" id=44]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant45.png" type="Texture" id=45]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant46.png" type="Texture" id=46]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant34.png" type="Texture" id=47]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant27.png" type="Texture" id=48]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant28.png" type="Texture" id=49]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant30.png" type="Texture" id=50]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant31.png" type="Texture" id=51]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant37.png" type="Texture" id=52]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant35.png" type="Texture" id=53]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant38.png" type="Texture" id=54]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant33.png" type="Texture" id=55]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant39.png" type="Texture" id=56]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant40.png" type="Texture" id=57]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant41.png" type="Texture" id=58]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant71.png" type="Texture" id=59]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant72.png" type="Texture" id=60]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant70.png" type="Texture" id=61]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant69.png" type="Texture" id=62]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant73.png" type="Texture" id=63]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant76.png" type="Texture" id=64]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant75.png" type="Texture" id=65]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant78.png" type="Texture" id=66]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant79.png" type="Texture" id=67]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant77.png" type="Texture" id=68]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant81.png" type="Texture" id=69]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant82.png" type="Texture" id=70]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant84.png" type="Texture" id=71]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant83.png" type="Texture" id=72]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant18.png" type="Texture" id=73]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant15.png" type="Texture" id=74]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant16.png" type="Texture" id=75]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant21.png" type="Texture" id=76]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant19.png" type="Texture" id=77]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant20.png" type="Texture" id=78]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant17.png" type="Texture" id=79]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant86.png" type="Texture" id=80]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant87.png" type="Texture" id=81]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant88.png" type="Texture" id=82]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant89.png" type="Texture" id=83]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant90.png" type="Texture" id=84]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant91.png" type="Texture" id=85]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant95.png" type="Texture" id=86]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant93.png" type="Texture" id=87]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant94.png" type="Texture" id=88]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant98.png" type="Texture" id=89]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant96.png" type="Texture" id=90]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant97.png" type="Texture" id=91]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant14.png" type="Texture" id=92]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant13.png" type="Texture" id=93]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant102.png" type="Texture" id=94]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant106.png" type="Texture" id=95]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant103.png" type="Texture" id=96]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant105.png" type="Texture" id=97]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant101.png" type="Texture" id=98]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant104.png" type="Texture" id=99]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant111.png" type="Texture" id=100]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant108.png" type="Texture" id=101]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant109.png" type="Texture" id=102]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant110.png" type="Texture" id=103]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant112.png" type="Texture" id=104]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant114.png" type="Texture" id=105]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant118.png" type="Texture" id=106]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant116.png" type="Texture" id=107]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant117.png" type="Texture" id=108]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant119.png" type="Texture" id=109]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant115.png" type="Texture" id=110]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant127.png" type="Texture" id=111]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant124.png" type="Texture" id=112]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant123.png" type="Texture" id=113]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant125.png" type="Texture" id=114]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant126.png" type="Texture" id=115]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant122.png" type="Texture" id=116]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant121.png" type="Texture" id=117]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant135.png" type="Texture" id=118]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant136.png" type="Texture" id=119]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant132.png" type="Texture" id=120]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant133.png" type="Texture" id=121]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant134.png" type="Texture" id=122]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant131.png" type="Texture" id=123]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant129.png" type="Texture" id=124]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant130.png" type="Texture" id=125]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant139.png" type="Texture" id=126]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant140.png" type="Texture" id=127]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant141.png" type="Texture" id=128]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant142.png" type="Texture" id=129]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant143.png" type="Texture" id=130]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant144.png" type="Texture" id=131]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant145.png" type="Texture" id=132]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant147.png" type="Texture" id=133]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant148.png" type="Texture" id=134]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant156.png" type="Texture" id=135]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant151.png" type="Texture" id=136]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant150.png" type="Texture" id=137]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant149.png" type="Texture" id=138]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant152.png" type="Texture" id=139]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant153.png" type="Texture" id=140]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant154.png" type="Texture" id=141]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant155.png" type="Texture" id=142]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant173.png" type="Texture" id=143]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant174.png" type="Texture" id=144]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant176.png" type="Texture" id=145]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant172.png" type="Texture" id=146]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant175.png" type="Texture" id=147]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant170.png" type="Texture" id=148]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant171.png" type="Texture" id=149]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant183.png" type="Texture" id=150]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant186.png" type="Texture" id=151]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant188.png" type="Texture" id=152]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant187.png" type="Texture" id=153]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant179.png" type="Texture" id=154]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant182.png" type="Texture" id=155]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant185.png" type="Texture" id=156]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant178.png" type="Texture" id=157]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant180.png" type="Texture" id=158]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant181.png" type="Texture" id=159]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant168.png" type="Texture" id=160]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant167.png" type="Texture" id=161]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant164.png" type="Texture" id=162]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant165.png" type="Texture" id=163]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/Tyrant166.png" type="Texture" id=164]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews2.png" type="Texture" id=165]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews4.png" type="Texture" id=166]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews5.png" type="Texture" id=167]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews7.png" type="Texture" id=168]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews8.png" type="Texture" id=169]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews1.png" type="Texture" id=170]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews3.png" type="Texture" id=171]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews6.png" type="Texture" id=172]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews10.png" type="Texture" id=173]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews9.png" type="Texture" id=174]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews12.png" type="Texture" id=175]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews11.png" type="Texture" id=176]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews13.png" type="Texture" id=177]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews14.png" type="Texture" id=178]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews15.png" type="Texture" id=179]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews19.png" type="Texture" id=180]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews21.png" type="Texture" id=181]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews20.png" type="Texture" id=182]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews16.png" type="Texture" id=183]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews18.png" type="Texture" id=184]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantNews17.png" type="Texture" id=185]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantThrow1.png" type="Texture" id=186]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantThrow2.png" type="Texture" id=187]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantThrow6.png" type="Texture" id=188]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantThrow7.png" type="Texture" id=189]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantThrow3.png" type="Texture" id=190]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantThrow5.png" type="Texture" id=191]
+[ext_resource path="res://_LamTyrant/characters/Assets/Sprites/TyrantThrow4.png" type="Texture" id=192]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/Tyrant79.png" type="Texture" id=193]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/Tyrant77.png" type="Texture" id=194]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/Tyrant76.png" type="Texture" id=195]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/Tyrant78.png" type="Texture" id=196]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/Tyrant125.png" type="Texture" id=197]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/Tyrant126.png" type="Texture" id=198]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/Tyrant127.png" type="Texture" id=199]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp21.png" type="Texture" id=200]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp18.png" type="Texture" id=201]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp30.png" type="Texture" id=202]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp25.png" type="Texture" id=203]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp31.png" type="Texture" id=204]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp35.png" type="Texture" id=205]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp26.png" type="Texture" id=206]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp43.png" type="Texture" id=207]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp28.png" type="Texture" id=208]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp24.png" type="Texture" id=209]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp40.png" type="Texture" id=210]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp32.png" type="Texture" id=211]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp7.png" type="Texture" id=212]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp15.png" type="Texture" id=213]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp13.png" type="Texture" id=214]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp38.png" type="Texture" id=215]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp4.png" type="Texture" id=216]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp11.png" type="Texture" id=217]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp14.png" type="Texture" id=218]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp33.png" type="Texture" id=219]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp34.png" type="Texture" id=220]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp22.png" type="Texture" id=221]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp27.png" type="Texture" id=222]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp44.png" type="Texture" id=223]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp3.png" type="Texture" id=224]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp6.png" type="Texture" id=225]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp19.png" type="Texture" id=226]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp2.png" type="Texture" id=227]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp17.png" type="Texture" id=228]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp23.png" type="Texture" id=229]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp10.png" type="Texture" id=230]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp5.png" type="Texture" id=231]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp16.png" type="Texture" id=232]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp41.png" type="Texture" id=233]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp39.png" type="Texture" id=234]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp36.png" type="Texture" id=235]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp45.png" type="Texture" id=236]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp42.png" type="Texture" id=237]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp8.png" type="Texture" id=238]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp9.png" type="Texture" id=239]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp46.png" type="Texture" id=240]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp72.png" type="Texture" id=242]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp69.png" type="Texture" id=243]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp71.png" type="Texture" id=244]
+[ext_resource path="res://_LamTyrant/characters/Assets/SpritesDearm/TyrantRevamp70.png" type="Texture" id=245]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 170 ), ExtResource( 165 ), ExtResource( 171 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 172 ), ExtResource( 168 ), ExtResource( 168 ), ExtResource( 169 ) ],
+"loop": true,
+"name": "Agriculture",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 174 ), ExtResource( 173 ), ExtResource( 176 ), ExtResource( 175 ), ExtResource( 177 ), ExtResource( 178 ) ],
+"loop": true,
+"name": "Agriculture2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 171 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 172 ), ExtResource( 168 ), ExtResource( 169 ) ],
+"loop": true,
+"name": "Agriculture3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 69 ), ExtResource( 70 ), ExtResource( 72 ), ExtResource( 71 ) ],
+"loop": true,
+"name": "Ankle Snap",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 62 ), ExtResource( 61 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 63 ) ],
+"loop": true,
+"name": "Back Hand",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 227 ), ExtResource( 224 ), ExtResource( 216 ), ExtResource( 231 ), ExtResource( 225 ), ExtResource( 212 ), ExtResource( 238 ), ExtResource( 239 ), ExtResource( 230 ), ExtResource( 217 ) ],
+"loop": true,
+"name": "Bash",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 133 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 134 ), ExtResource( 134 ), ExtResource( 138 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 136 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 141 ), ExtResource( 142 ), ExtResource( 142 ), ExtResource( 135 ), ExtResource( 135 ) ],
+"loop": true,
+"name": "Breach",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 31 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Burst",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 16 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "BurstFailed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 117 ), ExtResource( 116 ), ExtResource( 113 ), ExtResource( 112 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 115 ), ExtResource( 111 ) ],
+"loop": true,
+"name": "Cataclysm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 157 ), ExtResource( 154 ), ExtResource( 158 ), ExtResource( 159 ), ExtResource( 155 ), ExtResource( 155 ), ExtResource( 155 ), ExtResource( 150 ), ExtResource( 150 ), ExtResource( 150 ) ],
+"loop": true,
+"name": "Conquer",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 125 ), ExtResource( 125 ), ExtResource( 125 ), ExtResource( 125 ), ExtResource( 125 ), ExtResource( 125 ), ExtResource( 125 ), ExtResource( 125 ), ExtResource( 125 ), ExtResource( 125 ), ExtResource( 123 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 136 ), ExtResource( 117 ), ExtResource( 116 ), ExtResource( 113 ), ExtResource( 112 ), ExtResource( 114 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 115 ), ExtResource( 111 ), ExtResource( 111 ), ExtResource( 22 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "CrossIntro",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 151 ), ExtResource( 153 ), ExtResource( 152 ) ],
+"loop": true,
+"name": "CrossIntro2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 215 ), ExtResource( 234 ), ExtResource( 210 ), ExtResource( 233 ), ExtResource( 237 ), ExtResource( 207 ), ExtResource( 223 ), ExtResource( 236 ), ExtResource( 240 ) ],
+"loop": true,
+"name": "Crush",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 174 ), ExtResource( 174 ), ExtResource( 173 ), ExtResource( 173 ), ExtResource( 176 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 198 ), ExtResource( 199 ) ],
+"loop": true,
+"name": "Domination",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ) ],
+"loop": true,
+"name": "DoubleJump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "Getup",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Grab",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Grabbed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 179 ), ExtResource( 183 ), ExtResource( 185 ), ExtResource( 184 ), ExtResource( 180 ), ExtResource( 182 ), ExtResource( 182 ), ExtResource( 181 ) ],
+"loop": true,
+"name": "Guillotine",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 48 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 49 ), ExtResource( 41 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 43 ), ExtResource( 55 ), ExtResource( 47 ), ExtResource( 53 ), ExtResource( 42 ), ExtResource( 52 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ) ],
+"loop": true,
+"name": "Hold",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 108 ), ExtResource( 106 ), ExtResource( 109 ) ],
+"loop": true,
+"name": "Hold2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "HurtAerial",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "HurtGroundedHigh",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "HurtGroundedLow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "HurtGroundedMid",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 105 ), ExtResource( 110 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 106 ), ExtResource( 109 ) ],
+"loop": true,
+"name": "Impose",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 156 ), ExtResource( 151 ), ExtResource( 153 ), ExtResource( 153 ), ExtResource( 152 ), ExtResource( 152 ) ],
+"loop": true,
+"name": "Isolate",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "JumpBack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 87 ), ExtResource( 88 ), ExtResource( 86 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 89 ) ],
+"loop": true,
+"name": "Kick",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 100 ), ExtResource( 104 ) ],
+"loop": true,
+"name": "King's Elbow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Knockdown",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "Landing",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 4 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Landing2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ) ],
+"loop": true,
+"name": "Low Blow",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "ParryHigh",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "ParryLow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 21 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "ParrySuper",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 214 ), ExtResource( 218 ), ExtResource( 213 ), ExtResource( 232 ), ExtResource( 228 ), ExtResource( 201 ), ExtResource( 226 ) ],
+"loop": true,
+"name": "Pierce",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 158 ), ExtResource( 159 ), ExtResource( 155 ), ExtResource( 150 ) ],
+"loop": true,
+"name": "Recall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 74 ), ExtResource( 75 ), ExtResource( 79 ), ExtResource( 73 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 76 ) ],
+"loop": true,
+"name": "RollBackward",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 74 ), ExtResource( 75 ), ExtResource( 79 ), ExtResource( 73 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 76 ) ],
+"loop": true,
+"name": "RollForward",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 98 ), ExtResource( 94 ), ExtResource( 96 ), ExtResource( 99 ), ExtResource( 97 ), ExtResource( 95 ) ],
+"loop": true,
+"name": "Roundcastle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 124 ), ExtResource( 125 ), ExtResource( 123 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 118 ), ExtResource( 119 ) ],
+"loop": true,
+"name": "Serration",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 148 ), ExtResource( 148 ), ExtResource( 149 ), ExtResource( 149 ), ExtResource( 146 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 147 ), ExtResource( 147 ), ExtResource( 145 ) ],
+"loop": true,
+"name": "Shatter",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 202 ), ExtResource( 204 ), ExtResource( 211 ), ExtResource( 219 ), ExtResource( 220 ), ExtResource( 205 ), ExtResource( 235 ) ],
+"loop": true,
+"name": "Shred",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 200 ), ExtResource( 221 ), ExtResource( 229 ), ExtResource( 209 ), ExtResource( 203 ), ExtResource( 206 ), ExtResource( 222 ), ExtResource( 208 ) ],
+"loop": true,
+"name": "Split",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 37 ), ExtResource( 93 ), ExtResource( 139 ), ExtResource( 156 ), ExtResource( 151 ), ExtResource( 153 ), ExtResource( 153 ), ExtResource( 152 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "Start",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 65 ), ExtResource( 64 ), ExtResource( 68 ), ExtResource( 68 ), ExtResource( 66 ), ExtResource( 67 ) ],
+"loop": true,
+"name": "Strong Punch",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 161 ), ExtResource( 160 ) ],
+"loop": true,
+"name": "Taunt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 93 ), ExtResource( 93 ), ExtResource( 92 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 79 ), ExtResource( 73 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 76 ) ],
+"loop": true,
+"name": "Terrorize",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "ThrowTech",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 195 ), ExtResource( 194 ), ExtResource( 194 ), ExtResource( 196 ), ExtResource( 193 ) ],
+"loop": true,
+"name": "Toss",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 98 ), ExtResource( 94 ), ExtResource( 96 ), ExtResource( 96 ), ExtResource( 99 ), ExtResource( 97 ), ExtResource( 95 ) ],
+"loop": true,
+"name": "Toss2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 2 ), ExtResource( 34 ), ExtResource( 24 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "Treason",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Treason 1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ) ],
+"loop": true,
+"name": "Tyranny",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "Wait",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 36 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ) ],
+"loop": true,
+"name": "WallSlam",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 243 ), ExtResource( 245 ), ExtResource( 244 ), ExtResource( 242 ), ExtResource( 195 ), ExtResource( 194 ), ExtResource( 196 ), ExtResource( 193 ) ],
+"loop": true,
+"name": "Warhead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 186 ), ExtResource( 187 ), ExtResource( 190 ), ExtResource( 192 ), ExtResource( 191 ), ExtResource( 188 ), ExtResource( 189 ) ],
+"loop": true,
+"name": "Withdraw",
+"speed": 5.0
+} ]

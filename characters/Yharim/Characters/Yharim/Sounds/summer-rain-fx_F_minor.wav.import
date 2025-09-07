@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/summer-rain-fx_F_minor.wav-362b0583d28b498a12fd3f0994999109.sample"
+
+[deps]
+
+source_file="res://Yharim/Characters/Yharim/Sounds/summer-rain-fx_F_minor.wav"
+dest_files=[ "res://.import/summer-rain-fx_F_minor.wav-362b0583d28b498a12fd3f0994999109.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=4400
+edit/loop_end=480000
+compress/mode=0

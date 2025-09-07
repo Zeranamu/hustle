@@ -1,0 +1,245 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=1]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/DustPNG.png" type="Texture" id=2]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/YharimBodylightning.png" type="Texture" id=3]
+[ext_resource path="res://fx/ParticleEffect.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/Floorthing.png" type="Texture" id=5]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/Lightning.png" type="Texture" id=6]
+[ext_resource path="res://fx/four_point_star.png" type="Texture" id=7]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=10]
+particles_animation = true
+particles_anim_h_frames = 10
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=11]
+interpolation_mode = 1
+offsets = PoolRealArray( 0, 0.101124, 0.163842 )
+colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 1, 0.824219, 1, 0.99176, 1 )
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0.126506, 0.271084, 0.439759, 0.620482, 0.777108, 0.891566 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0.905882, 1, 1, 1, 0.941176, 1, 1, 1, 0.94902, 1, 1, 1, 0.972549, 1, 1, 1, 0.984314, 1, 1, 1, 0.937255 )
+
+[sub_resource type="Curve" id=15]
+_data = [ Vector2( 0, 0.518182 ), 0.0, 0.0, 0, 0, Vector2( 0.128713, 0.6 ), 0.0, 0.0, 0, 0, Vector2( 0.232673, 0.472727 ), 0.0, 0.0, 0, 0, Vector2( 0.366337, 0.536364 ), 0.0, 0.0, 0, 0, Vector2( 0.445545, 0.427273 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=7]
+interpolation_mode = 1
+offsets = PoolRealArray( 0, 0.0335196, 0.0614525, 0.111732, 0.145251, 0.184358, 0.251397, 0.379888, 0.47486, 0.547486, 0.636872, 0.75419, 0.877095, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0.756863, 1, 1, 1, 0.94902, 1, 1, 1, 0.635294, 1, 1, 1, 0.937255, 1, 1, 1, 0.572549, 1, 1, 1, 1, 1, 1, 1, 0.828358, 0.835938, 0.604095, 0.604095, 0.701493, 0.773438, 0.519653, 0.519653, 0.604478, 0.703125, 0.376282, 0.376282, 0.485075, 0.640625, 0.362854, 0.362854, 0.328358, 0.601562, 0.0140991, 0.0140991, 0.164179, 0.238281, 0, 0, 0 )
+
+[sub_resource type="Gradient" id=12]
+offsets = PoolRealArray( 0, 0.0614525, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1 )
+
+[sub_resource type="Curve" id=8]
+min_value = 1.0
+max_value = 2.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.267327, 1.1 ), 0.0, 0.0, 0, 0, Vector2( 0.465347, 1.03636 ), 0.0, 0.0, 0, 0, Vector2( 0.653465, 1.1 ), 0.0, 0.0, 0, 0, Vector2( 0.856436, 1.01818 ), 0.0, 0.0, 0, 0, Vector2( 1, 1.04545 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=9]
+offsets = PoolRealArray( 0, 0.0391061, 0.899441, 1 )
+colors = PoolColorArray( 0.678431, 0.909804, 1, 0, 0.682405, 0.914464, 1, 1, 0.742188, 0.993958, 1, 1, 1, 0.780392, 0.780392, 0 )
+
+[sub_resource type="CanvasItemMaterial" id=13]
+particles_animation = true
+particles_anim_h_frames = 9
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=14]
+interpolation_mode = 1
+offsets = PoolRealArray( 0.349398, 0.536145, 0.903614 )
+colors = PoolColorArray( 1, 0, 0, 1, 0.5625, 0, 0, 1, 0, 0.961914, 1, 1 )
+
+[node name="ParticleEffect" instance=ExtResource( 4 )]
+material = SubResource( 1 )
+z_index = -100
+__meta__ = {
+"_edit_lock_": true
+}
+one_shot = false
+lifetime = 360000.0
+
+[node name="BigLighting" type="CPUParticles2D" parent="." index="1"]
+material = SubResource( 10 )
+position = Vector2( 1, -350 )
+scale = Vector2( 1, 1.5 )
+amount = 1
+lifetime = 5.0
+speed_scale = 2.0
+texture = ExtResource( 6 )
+emission_shape = 2
+emission_rect_extents = Vector2( 800, 0 )
+gravity = Vector2( 0, 0 )
+color_ramp = SubResource( 11 )
+hue_variation = 0.03
+hue_variation_random = 1.0
+anim_speed = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky" type="CPUParticles2D" parent="." index="2"]
+position = Vector2( -6, 2450 )
+rotation = 3.14159
+scale = Vector2( 11, 5 )
+amount = 1
+texture = ExtResource( 5 )
+gravity = Vector2( 0, 0 )
+color = Color( 0.0352941, 0.0470588, 0.239216, 0.721569 )
+color_ramp = SubResource( 6 )
+
+[node name="Stars" type="CPUParticles2D" parent="." index="3"]
+amount = 150
+lifetime = 2.0
+texture = ExtResource( 7 )
+emission_shape = 2
+emission_rect_extents = Vector2( 800, 1000 )
+direction = Vector2( -1, 1 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+angular_velocity = 92.48
+angular_velocity_random = 1.0
+scale_amount = 0.5
+scale_amount_curve = SubResource( 15 )
+color_ramp = SubResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Rain" type="CPUParticles2D" parent="." index="4"]
+position = Vector2( 1, -666 )
+scale = Vector2( 1.8, 6 )
+amount = 25
+lifetime = 1.2
+emission_shape = 2
+emission_rect_extents = Vector2( 800, 1 )
+direction = Vector2( 0, 1 )
+initial_velocity = 45.87
+initial_velocity_random = 1.0
+angular_velocity = 720.0
+scale_amount = 1.2
+scale_amount_random = 1.0
+color = Color( 0.678431, 0.803922, 0.866667, 1 )
+color_ramp = SubResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cloud" type="CPUParticles2D" parent="." index="5"]
+position = Vector2( 1, -666 )
+scale = Vector2( 1.8, 1.2 )
+amount = 40
+lifetime = 5.0
+texture = ExtResource( 2 )
+emission_shape = 2
+emission_rect_extents = Vector2( 800, 50 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 1.0
+scale_amount = 1.5
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 8 )
+color = Color( 0.894118, 0.913725, 1, 1 )
+color_ramp = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cloud2" type="CPUParticles2D" parent="." index="6"]
+position = Vector2( 1, -666 )
+scale = Vector2( -1.8, 1.2 )
+amount = 40
+lifetime = 5.0
+texture = ExtResource( 2 )
+emission_shape = 2
+emission_rect_extents = Vector2( 800, 50 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 1.0
+scale_amount = 1.5
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 8 )
+color = Color( 0.894118, 0.913725, 1, 1 )
+color_ramp = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cloud3" type="CPUParticles2D" parent="." index="7"]
+position = Vector2( 1, -666 )
+scale = Vector2( 1.8, 1.2 )
+amount = 40
+lifetime = 5.0
+texture = ExtResource( 2 )
+emission_shape = 2
+emission_rect_extents = Vector2( 400, 60 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 1.0
+scale_amount = 1.5
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 8 )
+color = Color( 0.894118, 0.913725, 1, 1 )
+color_ramp = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cloud4" type="CPUParticles2D" parent="." index="8"]
+position = Vector2( 1, -666 )
+scale = Vector2( -1.8, 1.2 )
+amount = 40
+lifetime = 5.0
+texture = ExtResource( 2 )
+emission_shape = 2
+emission_rect_extents = Vector2( 400, 60 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 1.0
+scale_amount = 1.5
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 8 )
+color = Color( 0.894118, 0.913725, 1, 1 )
+color_ramp = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Lightning2" type="CPUParticles2D" parent="." index="9"]
+material = SubResource( 13 )
+position = Vector2( -1, -207 )
+amount = 15
+texture = ExtResource( 3 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1000, 500 )
+gravity = Vector2( 0, 0 )
+scale_amount = 0.2
+color_initial_ramp = SubResource( 14 )
+anim_speed = 1.0
+__meta__ = {
+"_edit_lock_": true
+}

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/HellkiteSmallHit3.ogg-b4d02b3c2700a2c59355496b762471dc.oggstr"
+
+[deps]
+
+source_file="res://Yharim/Characters/Yharim/Sounds/HellkiteSmallHit3.ogg"
+dest_files=[ "res://.import/HellkiteSmallHit3.ogg-b4d02b3c2700a2c59355496b762471dc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

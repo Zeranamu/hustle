@@ -1,0 +1,177 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/Y-export.png" type="Texture" id=1]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/05.png" type="Texture" id=22]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/flare1.png" type="Texture" id=24]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/YharimBodylightning.png" type="Texture" id=27]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/DustPNG.png" type="Texture" id=78]
+[ext_resource path="res://fx/ParticleEffect.tscn" type="PackedScene" id=90]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=91]
+
+[sub_resource type="ShaderMaterial" id=875]
+resource_local_to_scene = true
+shader = ExtResource( 91 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=880]
+
+[sub_resource type="Gradient" id=881]
+offsets = PoolRealArray( 0, 0.156425, 0.396648, 0.541899, 0.681564, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 0.791504, 0.619347, 0.476139, 1, 1, 1, 1, 1, 0.838379, 0.838379, 0.838379, 1, 1, 1, 1, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=876]
+blend_mode = 1
+
+[sub_resource type="Curve" id=877]
+min_value = 1.0
+max_value = 1.5
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.217822, 1.05 ), 0.0, 0.0, 0, 0, Vector2( 0.569307, 1.08636 ), 0.0, 0.0, 0, 0, Vector2( 0.846535, 1.05455 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=878]
+offsets = PoolRealArray( 0, 0.519553, 0.798883, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0.596078, 1, 1, 1, 1, 1, 1, 1, 0.988235 )
+
+[sub_resource type="Gradient" id=879]
+colors = PoolColorArray( 0.340332, 0, 0, 1, 1, 0.265625, 0.265625, 1 )
+
+[sub_resource type="Gradient" id=884]
+offsets = PoolRealArray( 0, 0.195531 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="CanvasItemMaterial" id=888]
+particles_animation = true
+particles_anim_h_frames = 9
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=886]
+offsets = PoolRealArray( 0, 0.614458, 0.849398 )
+colors = PoolColorArray( 0.150452, 0.254827, 0.265625, 1, 0.808594, 0.808594, 0.808594, 1, 0, 0.519531, 0.519531, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=885]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 9
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Gradient" id=887]
+offsets = PoolRealArray( 0, 0.620482, 0.885542 )
+colors = PoolColorArray( 1, 0, 0, 1, 0.835938, 0.835938, 0.835938, 1, 0.648438, 0, 0, 1 )
+
+[node name="AchivmentSkinBack" instance=ExtResource( 90 )]
+material = SubResource( 875 )
+
+[node name="Star" type="CPUParticles2D" parent="." index="1"]
+material = SubResource( 880 )
+position = Vector2( -2, 0 )
+scale = Vector2( 0.5, 0.2 )
+z_index = -1
+amount = 1
+lifetime = 999999.0
+texture = ExtResource( 24 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 27.42
+scale_amount = 0.1
+color = Color( 1, 0, 0, 1 )
+color_ramp = SubResource( 881 )
+
+[node name="Helisk" type="CPUParticles2D" parent="." index="2"]
+material = SubResource( 876 )
+position = Vector2( -12, -32 )
+scale = Vector2( 0.1, 0.2 )
+z_index = -1
+amount = 3
+lifetime = 5.0
+texture = ExtResource( 22 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 132.11
+orbit_velocity = 771.14
+orbit_velocity_random = 0.5
+scale_amount = 0.1
+scale_amount_curve = SubResource( 877 )
+color_ramp = SubResource( 878 )
+color_initial_ramp = SubResource( 879 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SingleDisk" type="CPUParticles2D" parent="." index="3"]
+material = SubResource( 876 )
+position = Vector2( -12, -32 )
+scale = Vector2( 0.1, 0.2 )
+z_index = -1
+amount = 1
+lifetime = 5.0
+texture = ExtResource( 1 )
+gravity = Vector2( 0, 0 )
+orbit_velocity = 771.14
+orbit_velocity_random = 0.5
+scale_amount = 0.1
+scale_amount_curve = SubResource( 877 )
+color_ramp = SubResource( 878 )
+color_initial_ramp = SubResource( 879 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Smoke" type="CPUParticles2D" parent="." index="4"]
+position = Vector2( -6, -24 )
+amount = 40
+speed_scale = 0.2
+texture = ExtResource( 78 )
+direction = Vector2( -5, -10 )
+spread = 11.61
+initial_velocity = 91.74
+angle = 720.0
+angle_random = 0.49
+scale_amount = 0.2
+color_ramp = SubResource( 884 )
+
+[node name="BLighting" type="CPUParticles2D" parent="." index="5"]
+material = SubResource( 888 )
+position = Vector2( -3, -19 )
+scale = Vector2( 0.5, 0.5 )
+amount = 5
+lifetime = 0.34
+texture = ExtResource( 27 )
+emission_shape = 2
+emission_rect_extents = Vector2( 11, 22 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 10.0
+angle = 720.0
+angle_random = 1.0
+scale_amount = 0.2
+color = Color( 0.996078, 0, 0, 0.654902 )
+color_initial_ramp = SubResource( 886 )
+anim_speed = 1.0
+
+[node name="RLightning" type="CPUParticles2D" parent="." index="6"]
+material = SubResource( 885 )
+position = Vector2( -3, -19 )
+scale = Vector2( 0.3, 0.4 )
+amount = 5
+lifetime = 0.34
+texture = ExtResource( 27 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1, 22 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 10.0
+angle = 720.0
+angle_random = 1.0
+scale_amount = 0.5
+color = Color( 1, 0, 0, 0.654902 )
+color_initial_ramp = SubResource( 887 )
+anim_speed = 1.0

@@ -1,0 +1,260 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://fx/ParticleEffect.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/YharimBodylightning.png" type="Texture" id=2]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/Lightning.png" type="Texture" id=3]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=4]
+[ext_resource path="res://fx/particle_round_4x4.png" type="Texture" id=5]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/Rock1.png" type="Texture" id=6]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/Rock2.png" type="Texture" id=7]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/Rock3.png" type="Texture" id=8]
+
+[sub_resource type="ShaderMaterial" id=4]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=2]
+particles_animation = true
+particles_anim_h_frames = 10
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=3]
+interpolation_mode = 1
+offsets = PoolRealArray( 0, 0.101124, 0.163842 )
+colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 1, 1, 0.0512821, 0.0512821, 1 )
+
+[sub_resource type="Curve" id=5]
+_data = [ Vector2( 0, 0.845454 ), 0.0, 0.0, 0, 0, Vector2( 0.042328, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0.407821, 0.480447 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="Gradient" id=7]
+colors = PoolColorArray( 1, 1, 1, 1, 0.804688, 0.804688, 0.804688, 1 )
+
+[sub_resource type="Curve" id=8]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.988417, 0.00340903 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=9]
+colors = PoolColorArray( 1, 1, 1, 1, 0.692383, 0.692383, 0.692383, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=10]
+particles_animation = true
+particles_anim_h_frames = 9
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=11]
+offsets = PoolRealArray( 0, 0.642458, 1 )
+colors = PoolColorArray( 0, 1, 0.991211, 1, 0, 1, 0.970231, 1, 1, 0, 0, 1 )
+
+[node name="ParticleEffect" instance=ExtResource( 1 )]
+material = SubResource( 4 )
+
+[node name="BigLighting" type="CPUParticles2D" parent="." index="1"]
+material = SubResource( 2 )
+amount = 1
+lifetime = 0.5
+texture = ExtResource( 3 )
+gravity = Vector2( 0, 0 )
+color_ramp = SubResource( 3 )
+anim_speed = 1.0
+
+[node name="Rock3" type="CPUParticles2D" parent="." index="2"]
+position = Vector2( 32.3847, 213.75 )
+scale = Vector2( 0.7, 0.7 )
+z_index = -4
+amount = 1
+lifetime = 2.0
+texture = ExtResource( 8 )
+gravity = Vector2( 0, 0 )
+scale_amount = 1.5
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
+color_initial_ramp = SubResource( 7 )
+
+[node name="Rock2" type="CPUParticles2D" parent="." index="3"]
+position = Vector2( 8.61544, 213.75 )
+scale = Vector2( 0.7, 0.7 )
+z_index = -1
+amount = 1
+lifetime = 2.0
+texture = ExtResource( 7 )
+gravity = Vector2( 0, 0 )
+scale_amount = 1.5
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
+color_initial_ramp = SubResource( 7 )
+
+[node name="Rock" type="CPUParticles2D" parent="." index="4"]
+position = Vector2( 45.3847, 213.75 )
+scale = Vector2( 0.7, 0.7 )
+amount = 1
+lifetime = 2.0
+texture = ExtResource( 6 )
+gravity = Vector2( 0, 0 )
+scale_amount = 1.5
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
+color_initial_ramp = SubResource( 7 )
+
+[node name="Rock7" type="CPUParticles2D" parent="." index="5"]
+position = Vector2( 79.6924, 222.5 )
+z_index = -1
+amount = 1
+lifetime = 2.0
+texture = ExtResource( 8 )
+gravity = Vector2( 0, 0 )
+scale_amount = 0.5
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
+color_initial_ramp = SubResource( 7 )
+
+[node name="Rock8" type="CPUParticles2D" parent="." index="6"]
+position = Vector2( 71.6924, 222.5 )
+z_index = -1
+amount = 1
+lifetime = 2.0
+texture = ExtResource( 7 )
+gravity = Vector2( 0, 0 )
+scale_amount = 0.5
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
+color_initial_ramp = SubResource( 7 )
+
+[node name="Rock9" type="CPUParticles2D" parent="." index="7"]
+position = Vector2( 89.6924, 222.5 )
+scale = Vector2( -1.5, 1 )
+amount = 1
+lifetime = 2.0
+texture = ExtResource( 6 )
+gravity = Vector2( 0, 0 )
+scale_amount = 0.5
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
+color_initial_ramp = SubResource( 7 )
+
+[node name="Rock4" type="CPUParticles2D" parent="." index="8"]
+position = Vector2( -24.3076, 213.75 )
+scale = Vector2( -0.7, 0.7 )
+z_index = -4
+amount = 1
+lifetime = 2.0
+texture = ExtResource( 8 )
+gravity = Vector2( 0, 0 )
+scale_amount = 1.5
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
+color_initial_ramp = SubResource( 7 )
+
+[node name="Rock5" type="CPUParticles2D" parent="." index="9"]
+position = Vector2( -52.1538, 213.75 )
+scale = Vector2( -0.7, 0.7 )
+z_index = -4
+amount = 1
+lifetime = 2.0
+texture = ExtResource( 7 )
+gravity = Vector2( 0, 0 )
+scale_amount = 1.5
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
+color_initial_ramp = SubResource( 7 )
+
+[node name="Rock6" type="CPUParticles2D" parent="." index="10"]
+position = Vector2( -17.3076, 213.75 )
+scale = Vector2( -0.7, 0.7 )
+z_index = -3
+amount = 1
+lifetime = 2.0
+texture = ExtResource( 6 )
+gravity = Vector2( 0, 0 )
+scale_amount = 1.5
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
+color_initial_ramp = SubResource( 7 )
+
+[node name="Rock10" type="CPUParticles2D" parent="." index="11"]
+position = Vector2( -66, 222.5 )
+scale = Vector2( -1, 1 )
+z_index = -1
+amount = 1
+lifetime = 2.0
+texture = ExtResource( 8 )
+gravity = Vector2( 0, 0 )
+scale_amount = 0.5
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
+color_initial_ramp = SubResource( 7 )
+
+[node name="Rock11" type="CPUParticles2D" parent="." index="12"]
+position = Vector2( -77, 222.5 )
+scale = Vector2( -1, 1 )
+z_index = -1
+amount = 1
+lifetime = 2.0
+texture = ExtResource( 7 )
+gravity = Vector2( 0, 0 )
+scale_amount = 0.5
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
+color_initial_ramp = SubResource( 7 )
+
+[node name="Rock12" type="CPUParticles2D" parent="." index="13"]
+position = Vector2( -86, 222.5 )
+rotation = 3.14159
+scale = Vector2( -1, -1 )
+amount = 1
+lifetime = 2.0
+texture = ExtResource( 6 )
+gravity = Vector2( 0, 0 )
+scale_amount = 0.5
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
+color_initial_ramp = SubResource( 7 )
+
+[node name="Smoke" type="CPUParticles2D" parent="." index="14"]
+position = Vector2( 0.1539, 230 )
+z_index = -9
+amount = 35
+lifetime = 2.0
+speed_scale = 2.0
+explosiveness = 1.0
+texture = ExtResource( 5 )
+emission_shape = 2
+emission_rect_extents = Vector2( 80, 0 )
+direction = Vector2( 0, -1 )
+spread = 21.09
+gravity = Vector2( 0, 700 )
+initial_velocity = 312.03
+scale_amount = 4.0
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 8 )
+color = Color( 0.509804, 0.509804, 0.509804, 1 )
+color_initial_ramp = SubResource( 9 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." index="15"]
+material = SubResource( 10 )
+position = Vector2( 0.1539, 210 )
+explosiveness = 0.8
+texture = ExtResource( 2 )
+emission_shape = 2
+emission_rect_extents = Vector2( 80, 20 )
+gravity = Vector2( 0, 0 )
+angle = 52.8
+angle_random = 1.0
+scale_amount = 0.2
+color_initial_ramp = SubResource( 11 )
+anim_speed = 1.0

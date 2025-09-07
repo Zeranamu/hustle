@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MurasamaHitOrganic (1).wav-534decb04de8d8ac8a03b6d019c4f35a.sample"
+
+[deps]
+
+source_file="res://Yharim/Characters/Yharim/Sounds/MurasamaHitOrganic (1).wav"
+dest_files=[ "res://.import/MurasamaHitOrganic (1).wav-534decb04de8d8ac8a03b6d019c4f35a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

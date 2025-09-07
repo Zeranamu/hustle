@@ -1,0 +1,229 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/trace_07.png" type="Texture" id=1]
+[ext_resource path="res://fx/ParticleEffect.tscn" type="PackedScene" id=2]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=3]
+[ext_resource path="res://fx/four_point_star.png" type="Texture" id=4]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/WhiteBox.png" type="Texture" id=5]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/Vortex1.png" type="Texture" id=6]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/ShinyCircle.png" type="Texture" id=7]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/shockwave14.png" type="Texture" id=8]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 3 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=2]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=4]
+blend_mode = 2
+
+[sub_resource type="CanvasItemMaterial" id=5]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0.184358, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="CanvasItemMaterial" id=7]
+blend_mode = 1
+
+[sub_resource type="Curve" id=8]
+_data = [ Vector2( 0, 0.518182 ), 0.0, 0.0, 0, 0, Vector2( 0.128713, 0.6 ), 0.0, 0.0, 0, 0, Vector2( 0.232673, 0.472727 ), 0.0, 0.0, 0, 0, Vector2( 0.366337, 0.536364 ), 0.0, 0.0, 0, 0, Vector2( 0.445545, 0.427273 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=9]
+interpolation_mode = 1
+offsets = PoolRealArray( 0, 0.0335196, 0.0614525, 0.111732, 0.145251, 0.184358, 0.251397, 0.379888, 0.47486, 0.547486, 0.636872, 0.75419, 0.877095, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0.756863, 1, 1, 1, 0.94902, 1, 1, 1, 0.635294, 1, 1, 1, 0.937255, 1, 1, 1, 0.572549, 1, 1, 1, 1, 1, 1, 1, 0.828358, 0.835938, 0.604095, 0.604095, 0.701493, 0.773438, 0.519653, 0.519653, 0.604478, 0.703125, 0.376282, 0.376282, 0.485075, 0.640625, 0.362854, 0.362854, 0.328358, 0.601562, 0.0140991, 0.0140991, 0.164179, 0.238281, 0, 0, 0 )
+
+[node name="ParticleEffect" instance=ExtResource( 2 )]
+material = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="." index="1"]
+texture = ExtResource( 5 )
+gravity = Vector2( 0, 0 )
+scale_amount = 65.05
+color = Color( 0, 0, 0, 1 )
+
+[node name="CPUParticles2D10" type="CPUParticles2D" parent="." index="2"]
+gravity = Vector2( 0, 0 )
+scale_amount = 65.05
+color = Color( 0, 0, 0, 1 )
+
+[node name="OrangeCircle" type="CPUParticles2D" parent="." index="3"]
+material = SubResource( 2 )
+amount = 1
+texture = ExtResource( 8 )
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector2( 0, 0 )
+angular_velocity = 720.0
+scale_amount = 1.2
+color = Color( 0.847059, 0.54902, 0, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="OrangeRad" type="CPUParticles2D" parent="." index="4"]
+material = SubResource( 3 )
+amount = 1
+texture = ExtResource( 7 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 720.0
+scale_amount = 19.35
+color = Color( 1, 0.584314, 0, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Black" type="CPUParticles2D" parent="." index="5"]
+material = SubResource( 4 )
+amount = 23
+texture = ExtResource( 8 )
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector2( 0, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Black2" type="CPUParticles2D" parent="." index="6"]
+material = SubResource( 4 )
+amount = 11
+texture = ExtResource( 8 )
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector2( 0, 0 )
+scale_amount = 0.5
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="." index="7"]
+material = SubResource( 5 )
+position = Vector2( -441, -132 )
+rotation = -0.767945
+amount = 10
+texture = ExtResource( 1 )
+emission_shape = 1
+emission_sphere_radius = 85.54
+gravity = Vector2( 0, 0 )
+angle = 89.9
+color = Color( 1, 0.686275, 0.2, 1 )
+color_ramp = SubResource( 6 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." index="8"]
+material = SubResource( 5 )
+position = Vector2( 382, -157 )
+rotation = 0.767945
+amount = 10
+texture = ExtResource( 1 )
+emission_shape = 1
+emission_sphere_radius = 85.54
+gravity = Vector2( 0, 0 )
+angle = -89.9
+color = Color( 1, 0.686275, 0.2, 1 )
+color_ramp = SubResource( 6 )
+__meta__ = {
+"_edit_lock_": true,
+"_editor_description_": ""
+}
+
+[node name="Vortex" type="CPUParticles2D" parent="." index="9"]
+material = SubResource( 7 )
+scale = Vector2( 2, 0.3 )
+amount = 1
+lifetime = 100.0
+explosiveness = 1.0
+texture = ExtResource( 6 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 79.27
+angular_velocity_random = 1.0
+scale_amount = 3.0
+color = Color( 1, 0.686275, 0.2, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Vortex2" type="CPUParticles2D" parent="." index="10"]
+material = SubResource( 7 )
+scale = Vector2( 2, 0.3 )
+amount = 4
+explosiveness = 0.18
+texture = ExtResource( 6 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 66.06
+scale_amount = 3.0
+color = Color( 1, 0.686275, 0.2, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Vortex3" type="CPUParticles2D" parent="." index="11"]
+material = SubResource( 7 )
+position = Vector2( 0, 2 )
+amount = 5
+lifetime = 100.0
+texture = ExtResource( 6 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 79.27
+angular_velocity_random = 1.0
+scale_amount = 3.0
+color = Color( 1, 0.686275, 0.2, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Vortex4" type="CPUParticles2D" parent="." index="12"]
+visible = false
+material = SubResource( 7 )
+position = Vector2( 0, 2 )
+scale = Vector2( 2, 0.3 )
+amount = 9
+lifetime = 100.0
+explosiveness = 1.0
+texture = ExtResource( 6 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 79.27
+angular_velocity_random = 1.0
+scale_amount = 3.0
+color = Color( 1, 0.686275, 0.2, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Stars" type="CPUParticles2D" parent="." index="13"]
+amount = 150
+lifetime = 2.0
+texture = ExtResource( 4 )
+emission_shape = 2
+emission_rect_extents = Vector2( 2000, 1000 )
+direction = Vector2( -1, 1 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+angular_velocity = 92.48
+angular_velocity_random = 1.0
+scale_amount = 0.5
+scale_amount_curve = SubResource( 8 )
+color_ramp = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}

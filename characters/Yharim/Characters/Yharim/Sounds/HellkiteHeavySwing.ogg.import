@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/HellkiteHeavySwing.ogg-951ea62667fe5bd021f24afb5781ce53.oggstr"
+
+[deps]
+
+source_file="res://Yharim/Characters/Yharim/Sounds/HellkiteHeavySwing.ogg"
+dest_files=[ "res://.import/HellkiteHeavySwing.ogg-951ea62667fe5bd021f24afb5781ce53.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

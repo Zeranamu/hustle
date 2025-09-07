@@ -1,0 +1,89 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/Shockewave.png" type="Texture" id=3]
+[ext_resource path="res://fx/ParticleEffect.tscn" type="PackedScene" id=84]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=85]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/YharimBodylightning.png" type="Texture" id=86]
+
+[sub_resource type="ShaderMaterial" id=660]
+resource_local_to_scene = true
+shader = ExtResource( 85 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="Curve" id=663]
+_data = [ Vector2( 0, 0.0363636 ), 0.0, 0.0, 0, 0, Vector2( 0.168317, 0.181818 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=664]
+offsets = PoolRealArray( 0, 0.173184 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="Gradient" id=665]
+interpolation_mode = 1
+offsets = PoolRealArray( 1 )
+colors = PoolColorArray( 0, 1, 0.976562, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=666]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 9
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Gradient" id=667]
+offsets = PoolRealArray( 0, 0.184358 )
+colors = PoolColorArray( 0, 1, 0.827148, 1, 0, 1, 0.991211, 0 )
+
+[node name="ParticleEffect" instance=ExtResource( 84 )]
+material = SubResource( 660 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." index="1"]
+position = Vector2( 10, -33 )
+amount = 1
+explosiveness = 1.0
+texture = ExtResource( 3 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 720.0
+angular_velocity_random = 1.0
+scale_amount = 0.5
+scale_amount_curve = SubResource( 663 )
+color_ramp = SubResource( 664 )
+color_initial_ramp = SubResource( 665 )
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="." index="2"]
+position = Vector2( 10, -33 )
+amount = 1
+explosiveness = 1.0
+texture = ExtResource( 3 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 720.0
+angular_velocity_random = 1.0
+scale_amount = 0.5
+scale_amount_curve = SubResource( 663 )
+color = Color( 1, 0, 0, 1 )
+color_ramp = SubResource( 664 )
+
+[node name="Elec3" type="CPUParticles2D" parent="." index="3"]
+material = SubResource( 666 )
+position = Vector2( 10, -37 )
+scale = Vector2( 1, 2 )
+amount = 3
+explosiveness = 1.0
+texture = ExtResource( 86 )
+direction = Vector2( 0, 0 )
+spread = 0.0
+gravity = Vector2( 0, -98 )
+angle = 720.0
+angle_random = 1.0
+scale_amount = 0.1
+color_ramp = SubResource( 667 )
+anim_speed = 4.0

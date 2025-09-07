@@ -1,0 +1,13 @@
+{
+  "name": "Tyrant",
+  "friendly_name": "Tyrant",
+  "description": "Tyrant",
+  "author": "Lam Hoang",
+  "version": "",
+  "link": "",
+  "id": "",
+  "overwrites": false,
+  "requires": ["char_loader"],
+  "client_side": false,
+  "priority": 0
+}

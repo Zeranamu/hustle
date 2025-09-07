@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=1]
+[ext_resource path="res://fx/ParticleEffect.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/HitEffect.png" type="Texture" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=2]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=3]
+interpolation_mode = 1
+offsets = PoolRealArray( 0, 0.0338983, 0.0903614 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 0, 0, 1, 0.448453, 0.0459734, 0.0459734, 1 )
+
+[node name="YharimHitEffect" instance=ExtResource( 2 )]
+material = SubResource( 1 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." index="1"]
+material = SubResource( 2 )
+scale = Vector2( 2, 2 )
+amount = 1
+explosiveness = 1.0
+texture = ExtResource( 3 )
+angle = 11.5
+angle_random = 1.0
+color_ramp = SubResource( 3 )
+anim_speed = 4.0
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="." index="2"]
+material = SubResource( 2 )
+scale = Vector2( 2, 2 )
+amount = 1
+explosiveness = 1.0
+texture = ExtResource( 3 )
+angle = 307.9
+angle_random = 0.33
+color_ramp = SubResource( 3 )
+anim_speed = 4.0

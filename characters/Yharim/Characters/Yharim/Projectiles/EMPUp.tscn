@@ -1,0 +1,179 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://projectile/BaseProjectile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Yharim/Characters/Yharim/Projectiles/EMP.png" type="Texture" id=3]
+[ext_resource path="res://mechanics/Hitbox.gd" type="Script" id=4]
+[ext_resource path="res://Yharim/Characters/Yharim/Sounds/AuricCancel SFX.wav" type="AudioStream" id=5]
+[ext_resource path="res://Yharim/Characters/Yharim/Sounds/ElectricHit.wav" type="AudioStream" id=6]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 256, 256 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 0, 256, 256 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 512, 0, 256, 256 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 768, 0, 256, 256 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 3 )
+region = Rect2( 1024, 0, 256, 256 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 1280, 0, 256, 256 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 1536, 0, 256, 256 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 1792, 0, 256, 256 )
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "Default",
+"speed": 5.0
+} ]
+
+[node name="EMP" instance=ExtResource( 2 )]
+projectile_immune = true
+
+[node name="Sprite" parent="Flip" index="0"]
+rotation = -0.698132
+frames = SubResource( 9 )
+animation = "Default"
+
+[node name="CollisionBox" parent="." index="2"]
+x = 15
+width = 52
+height = 9
+
+[node name="Hurtbox" parent="." index="3"]
+x = 12
+width = 51
+height = 4
+
+[node name="Default" parent="StateMachine" index="0"]
+apply_forces = true
+apply_fric = true
+anim_length = 21
+ticks_per_frame = 2
+move_x = 1
+move_y = -1
+clash = false
+lifetime = 21
+fizzle_on_ground = false
+fizzle_on_walls = false
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/Default" index="0"]
+z_index = 1000
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+x = 19
+y = -15
+width = 15
+height = 13
+damage = 65
+minimum_damage = 35
+hitstun_ticks = 15
+hitlag_ticks = 5
+hits_vs_grounded = false
+di_modifier = "0.5"
+hit_sound = ExtResource( 6 )
+hit_bass_sound = ExtResource( 5 )
+dir_x = "0.3"
+dir_y = "-0.8"
+knockback = "5.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+active_ticks = 15
+
+[node name="Hitbox2" type="Node2D" parent="StateMachine/Default" index="1"]
+z_index = 1000
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+x = -1
+width = 9
+height = 4
+damage = 65
+minimum_damage = 35
+hitstun_ticks = 15
+hitlag_ticks = 5
+hits_vs_grounded = false
+di_modifier = "0.5"
+priority = 1
+hit_sound = ExtResource( 6 )
+hit_bass_sound = ExtResource( 5 )
+dir_x = "0.3"
+dir_y = "-0.8"
+knockback = "5.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+active_ticks = 15
+
+[node name="Hitbox4" type="Node2D" parent="StateMachine/Default" index="2"]
+z_index = 1000
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+x = -8
+y = 7
+width = 9
+height = 4
+damage = 65
+minimum_damage = 35
+hitstun_ticks = 15
+hitlag_ticks = 5
+hits_vs_grounded = false
+di_modifier = "0.5"
+priority = 1
+hit_sound = ExtResource( 6 )
+hit_bass_sound = ExtResource( 5 )
+dir_x = "0.3"
+dir_y = "-0.8"
+knockback = "5.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+active_ticks = 15
+
+[node name="Hitbox3" type="Node2D" parent="StateMachine/Default" index="3"]
+z_index = 1000
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+x = 38
+y = -32
+width = 15
+height = 13
+damage = 65
+minimum_damage = 35
+hitstun_ticks = 15
+hitlag_ticks = 5
+hits_vs_grounded = false
+di_modifier = "0.5"
+priority = 2
+hit_sound = ExtResource( 6 )
+hit_bass_sound = ExtResource( 5 )
+dir_x = "0.3"
+dir_y = "-0.8"
+knockback = "5.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+active_ticks = 15

@@ -1,0 +1,258 @@
+[gd_scene load_steps=34 format=2]
+
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=1]
+[ext_resource path="res://fx/ParticleEffect.gd" type="Script" id=2]
+[ext_resource path="res://_LamTyrant/characters/Assets/Fx/TyCmain.png" type="Texture" id=3]
+[ext_resource path="res://_LamTyrant/characters/Assets/Fx/TyCsub.png" type="Texture" id=4]
+[ext_resource path="res://_LamTyrant/characters/Assets/Fx/TyShw2.png" type="Texture" id=5]
+[ext_resource path="res://_LamTyrant/characters/Assets/Fx/TyWind.png" type="Texture" id=6]
+[ext_resource path="res://_LamTyrant/characters/Assets/Fx/TyFlake.png" type="Texture" id=7]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 150, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 300, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 3 )
+region = Rect2( 450, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 600, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 750, 0, 150, 150 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 2 ), SubResource( 3 ), SubResource( 3 ), SubResource( 4 ), SubResource( 4 ), SubResource( 5 ), SubResource( 5 ), SubResource( 6 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 4 )
+region = Rect2( 150, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 4 )
+region = Rect2( 300, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 4 )
+region = Rect2( 450, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 4 )
+region = Rect2( 600, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 4 )
+region = Rect2( 750, 0, 150, 150 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ SubResource( 9 ), SubResource( 9 ), SubResource( 10 ), SubResource( 10 ), SubResource( 11 ), SubResource( 11 ), SubResource( 12 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CanvasItemMaterial" id=21]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=22]
+_data = [ Vector2( 0, 0.45092 ), 0.0, 1.43362, 0, 0, Vector2( 0.399671, 0.757669 ), 0.395613, 0.395613, 0, 0, Vector2( 1, 0.794478 ), -0.13924, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=16]
+offsets = PoolRealArray( 0, 0.319444, 1 )
+colors = PoolColorArray( 1, 1, 1, 0.25098, 1, 1, 1, 0.592157, 1, 1, 1, 0 )
+
+[sub_resource type="CanvasItemMaterial" id=23]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=17]
+_data = [ Vector2( 0, 0.315951 ), 0.0, 1.43362, 0, 0, Vector2( 0.333861, 0.708589 ), 0.687908, 0.687908, 0, 0, Vector2( 1, 1 ), -0.13924, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=20]
+offsets = PoolRealArray( 0, 0.319444, 1 )
+colors = PoolColorArray( 1, 1, 1, 0.25098, 1, 1, 1, 0.592157, 1, 1, 1, 0 )
+
+[sub_resource type="CanvasItemMaterial" id=19]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=18]
+offsets = PoolRealArray( 0, 0.815603 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="CanvasItemMaterial" id=24]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=25]
+_data = [ Vector2( 0, 0.45092 ), 0.0, 1.43362, 0, 0, Vector2( 0.399671, 0.757669 ), 0.395613, 0.395613, 0, 0, Vector2( 1, 0.794478 ), -0.13924, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=26]
+offsets = PoolRealArray( 0, 0.319444, 1 )
+colors = PoolColorArray( 1, 1, 1, 0.25098, 1, 1, 1, 0.592157, 1, 1, 1, 0 )
+
+[node name="ParticleEffect" type="Node2D"]
+material = SubResource( 1 )
+z_index = 100
+script = ExtResource( 2 )
+lifetime = 2.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 0, 0.784314, 1, 1 )
+z_index = -1
+z_as_relative = false
+frames = SubResource( 8 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+z_index = -1
+z_as_relative = false
+frames = SubResource( 15 )
+
+[node name="f3" type="CPUParticles2D" parent="."]
+modulate = Color( 0.694118, 1, 1, 0.117647 )
+material = SubResource( 21 )
+position = Vector2( 0, -4 )
+z_index = 2
+z_as_relative = false
+lifetime = 1.5
+speed_scale = 4.0
+explosiveness = 1.0
+fract_delta = false
+local_coords = false
+texture = ExtResource( 6 )
+emission_shape = 2
+emission_rect_extents = Vector2( 100, 100 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 100.0
+initial_velocity_random = 0.5
+linear_accel = -50.0
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 22 )
+color_ramp = SubResource( 16 )
+anim_speed = 2.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="f2" type="CPUParticles2D" parent="."]
+modulate = Color( 0, 1, 1, 0.701961 )
+material = SubResource( 23 )
+z_index = -2
+z_as_relative = false
+amount = 1
+lifetime = 1.5
+speed_scale = 7.0
+explosiveness = 1.0
+fract_delta = false
+local_coords = false
+texture = ExtResource( 5 )
+gravity = Vector2( 0, 0 )
+linear_accel = -100.0
+tangential_accel = 23.85
+angle = 720.0
+angle_random = 1.0
+scale_amount = 3.0
+scale_amount_curve = SubResource( 17 )
+color_ramp = SubResource( 20 )
+anim_speed = 2.0
+
+[node name="b3" type="CPUParticles2D" parent="."]
+modulate = Color( 0.0313726, 0.0392157, 0.141176, 0.643137 )
+material = SubResource( 19 )
+z_index = -3
+z_as_relative = false
+amount = 1
+lifetime = 1.5
+speed_scale = 7.0
+explosiveness = 1.0
+fract_delta = false
+local_coords = false
+texture = ExtResource( 5 )
+gravity = Vector2( 0, 0 )
+linear_accel = -100.0
+tangential_accel = 23.85
+angle = 720.0
+angle_random = 1.0
+scale_amount = 3.0
+scale_amount_curve = SubResource( 17 )
+color_ramp = SubResource( 18 )
+anim_speed = 2.0
+
+[node name="f4" type="CPUParticles2D" parent="."]
+modulate = Color( 0.411765, 0.890196, 1, 1 )
+material = SubResource( 24 )
+position = Vector2( 0, -4 )
+z_index = 2
+z_as_relative = false
+amount = 30
+lifetime = 1.5
+speed_scale = 2.0
+explosiveness = 1.0
+fract_delta = false
+local_coords = false
+texture = ExtResource( 7 )
+direction = Vector2( 1, -1 )
+spread = 180.0
+gravity = Vector2( 0, 20 )
+initial_velocity = 180.0
+initial_velocity_random = 0.5
+angular_velocity = 80.0
+angular_velocity_random = 1.0
+linear_accel = -50.0
+scale_amount = 0.02
+scale_amount_random = 0.1
+scale_amount_curve = SubResource( 25 )
+color_ramp = SubResource( 26 )
+anim_speed = 2.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.064
+one_shot = true

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://characters/stickman/ActionUIData/SkullShakerActionUIData.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ui/ActionSelector/ActionUIData/ActionUIDataCheckButton.gd" type="Script" id=2]
+[ext_resource path="res://Yharim/Characters/Yharim/UI/ShockMovment.gd" type="Script" id=3]
+
+[node name="ActionUIData" instance=ExtResource( 1 )]
+margin_right = 112.0
+margin_bottom = 36.0
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Distance" parent="." index="0"]
+unique_name_in_owner = true
+
+[node name="Shock" type="CheckButton" parent="." index="1"]
+unique_name_in_owner = true
+margin_left = 61.0
+margin_right = 112.0
+margin_bottom = 36.0
+text = "Shock"
+flat = true
+script = ExtResource( 2 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/YomiYharimOST.ogg-15b71975d6da9dedc8c7f906deac17f0.oggstr"
+
+[deps]
+
+source_file="res://Yharim/Characters/Yharim/Sounds/YomiYharimOST.ogg"
+dest_files=[ "res://.import/YomiYharimOST.ogg-15b71975d6da9dedc8c7f906deac17f0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

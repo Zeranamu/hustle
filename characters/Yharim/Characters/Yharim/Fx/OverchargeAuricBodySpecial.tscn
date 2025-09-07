@@ -1,0 +1,150 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=1]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/YharimBodylightning.png" type="Texture" id=2]
+[ext_resource path="res://fx/ParticleEffect.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/c73d6195-fed1-4f1f-bbe4-f723058ee952.png" type="Texture" id=4]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/DustPNG.png" type="Texture" id=5]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=2]
+particles_animation = true
+particles_anim_h_frames = 9
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.614458, 0.849398 )
+colors = PoolColorArray( 0.150452, 0.254827, 0.265625, 1, 0.808594, 0.808594, 0.808594, 1, 0, 0.519531, 0.519531, 1 )
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.620482, 0.885542 )
+colors = PoolColorArray( 0.325195, 0.0139732, 0.0139732, 1, 0.555664, 0.555664, 0.555664, 1, 0.648438, 0, 0, 1 )
+
+[sub_resource type="Curve" id=5]
+min_value = 1.0
+max_value = 1.5
+_data = [ Vector2( 0, 1.06364 ), 0.0, 0.0, 0, 0, Vector2( 0.168317, 1.19545 ), 0.0, 0.0, 0, 0, Vector2( 0.321782, 1.06818 ), 0.341217, 0.0, 0, 0, Vector2( 0.460396, 1.20909 ), 0.0, 0.0, 0, 0, Vector2( 0.628713, 1.05909 ), 0.0, 0.0, 0, 0, Vector2( 0.777228, 1.2 ), 0.0, 0.0, 0, 0, Vector2( 0.89604, 1.07273 ), 0.0, 0.0, 0, 0, Vector2( 0.990099, 1.17727 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0.117318, 0.240223, 0.335196, 0.441341, 0.575419, 0.72067, 0.865922, 1 )
+colors = PoolColorArray( 1, 0.168627, 0.168627, 1, 0.0859375, 1, 0.948645, 1, 1, 0, 0, 1, 0.378906, 1, 0.985443, 1, 0.253906, 1, 0.982513, 1, 1, 0.53125, 0.53125, 1, 0.121094, 1, 0.979401, 1, 0.0078125, 1, 0.976745, 1, 1, 0.796875, 0.796875, 1 )
+
+[sub_resource type="Gradient" id=12]
+offsets = PoolRealArray( 0, 0.0614525, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1 )
+
+[sub_resource type="Curve" id=8]
+min_value = 1.0
+max_value = 2.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.267327, 1.1 ), 0.0, 0.0, 0, 0, Vector2( 0.465347, 1.03636 ), 0.0, 0.0, 0, 0, Vector2( 0.653465, 1.1 ), 0.0, 0.0, 0, 0, Vector2( 0.856436, 1.01818 ), 0.0, 0.0, 0, 0, Vector2( 1, 1.04545 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=9]
+offsets = PoolRealArray( 0, 0.899441, 1 )
+colors = PoolColorArray( 0.679688, 0.910851, 1, 1, 0.742188, 0.993958, 1, 1, 1, 0.78125, 0.78125, 1 )
+
+[node name="ChargeAuricBody" instance=ExtResource( 3 )]
+material = SubResource( 1 )
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="." index="1"]
+material = SubResource( 2 )
+scale = Vector2( 0.5, 0.5 )
+amount = 5
+lifetime = 0.34
+texture = ExtResource( 2 )
+emission_shape = 2
+emission_rect_extents = Vector2( 11, 22 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 10.0
+angle = 720.0
+angle_random = 1.0
+scale_amount = 0.2
+color = Color( 0, 0.901961, 0.996078, 0.654902 )
+color_initial_ramp = SubResource( 3 )
+anim_speed = 1.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." index="2"]
+material = SubResource( 2 )
+scale = Vector2( 0.5, 0.5 )
+amount = 5
+lifetime = 0.34
+texture = ExtResource( 2 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1, 22 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 10.0
+angle = 720.0
+angle_random = 1.0
+scale_amount = 0.5
+color = Color( 1, 0, 0, 0.654902 )
+color_initial_ramp = SubResource( 4 )
+anim_speed = 1.0
+
+[node name="Aura" type="CPUParticles2D" parent="." index="3"]
+position = Vector2( 0, 16 )
+scale = Vector2( 0.2, 0.04 )
+z_index = -50
+amount = 1
+speed_scale = 1.5
+texture = ExtResource( 4 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 720.0
+scale_amount_curve = SubResource( 5 )
+color_ramp = SubResource( 6 )
+
+[node name="Rain" type="CPUParticles2D" parent="." index="4"]
+position = Vector2( 0, -40 )
+scale = Vector2( 0.4, 1.4 )
+emission_shape = 2
+emission_rect_extents = Vector2( 25, 2 )
+color = Color( 0.592157, 0.87451, 1, 1 )
+color_ramp = SubResource( 12 )
+
+[node name="Cloud" type="CPUParticles2D" parent="." index="5"]
+position = Vector2( 0, -40 )
+amount = 2
+lifetime = 36000.0
+texture = ExtResource( 5 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1.2, 1.1 )
+gravity = Vector2( 0, 0 )
+orbit_velocity = 1.0
+orbit_velocity_random = 1.0
+scale_amount_curve = SubResource( 8 )
+color_ramp = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cloud2" type="CPUParticles2D" parent="." index="6"]
+position = Vector2( 0, -40 )
+scale = Vector2( -1, 1 )
+amount = 1
+lifetime = 36000.0
+texture = ExtResource( 5 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1.2, 1.1 )
+gravity = Vector2( 0, 0 )
+orbit_velocity = 1.0
+orbit_velocity_random = 1.0
+scale_amount_curve = SubResource( 8 )
+color_ramp = SubResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}

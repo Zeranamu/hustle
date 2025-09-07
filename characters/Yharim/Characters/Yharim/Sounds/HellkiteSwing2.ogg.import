@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/HellkiteSwing2.ogg-d309114bf4e61a5f6ea32ee62c597d22.oggstr"
+
+[deps]
+
+source_file="res://Yharim/Characters/Yharim/Sounds/HellkiteSwing2.ogg"
+dest_files=[ "res://.import/HellkiteSwing2.ogg-d309114bf4e61a5f6ea32ee62c597d22.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

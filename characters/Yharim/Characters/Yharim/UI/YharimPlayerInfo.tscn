@@ -1,0 +1,169 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=1]
+[ext_resource path="res://Yharim/Characters/Yharim/UI/AuricChargeBarUnder.png" type="Texture" id=2]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/AuricUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Yharim/Characters/Yharim/UI/YharimPlayerInfo.gd" type="Script" id=4]
+[ext_resource path="res://Yharim/Characters/Yharim/UI/AuricChargeBarBlue.png" type="Texture" id=5]
+[ext_resource path="res://Yharim/Characters/Yharim/UI/AuricChargeBarTop.png" type="Texture" id=6]
+[ext_resource path="res://Yharim/Characters/Yharim/UI/AuricChargeBarPro6.png" type="Texture" id=7]
+[ext_resource path="res://Yharim/Characters/Yharim/UI/AuricChargeBarRed.png" type="Texture" id=8]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/OverChargeBarVFX.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/BarEffect2.tscn" type="PackedScene" id=10]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[node name="PlayerInfo" type="Control"]
+margin_right = 143.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+mouse_filter = 1
+size_flags_horizontal = 3
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+margin_left = 49.0
+margin_top = 1.0
+margin_right = 145.0
+margin_bottom = 41.0
+
+[node name="BarUnder" type="TextureRect" parent="HBoxContainer"]
+unique_name_in_owner = true
+margin_right = 96.0
+margin_bottom = 40.0
+mouse_filter = 0
+texture = ExtResource( 2 )
+
+[node name="Charge" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+margin_left = 63.0
+margin_top = 6.0
+margin_right = 133.0
+margin_bottom = 46.0
+custom_constants/separation = 10
+
+[node name="1" type="TextureRect" parent="Charge"]
+unique_name_in_owner = true
+margin_right = 6.0
+margin_bottom = 40.0
+texture = ExtResource( 5 )
+
+[node name="2" type="TextureRect" parent="Charge"]
+unique_name_in_owner = true
+margin_left = 16.0
+margin_right = 22.0
+margin_bottom = 40.0
+texture = ExtResource( 5 )
+
+[node name="3" type="TextureRect" parent="Charge"]
+unique_name_in_owner = true
+margin_left = 32.0
+margin_right = 38.0
+margin_bottom = 40.0
+texture = ExtResource( 5 )
+
+[node name="4" type="TextureRect" parent="Charge"]
+unique_name_in_owner = true
+margin_left = 48.0
+margin_right = 54.0
+margin_bottom = 40.0
+texture = ExtResource( 8 )
+
+[node name="5" type="TextureRect" parent="Charge"]
+unique_name_in_owner = true
+margin_left = 64.0
+margin_right = 70.0
+margin_bottom = 40.0
+texture = ExtResource( 8 )
+
+[node name="Overcharge" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+margin_left = 49.0
+margin_top = 1.0
+margin_right = 145.0
+margin_bottom = 41.0
+
+[node name="OC" type="TextureRect" parent="Overcharge"]
+unique_name_in_owner = true
+margin_right = 96.0
+margin_bottom = 40.0
+texture = ExtResource( 7 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+margin_left = 49.0
+margin_top = 1.0
+margin_right = 145.0
+margin_bottom = 41.0
+hint_tooltip = "Auric Charge, gain it from
+combo count, guardbreaks, and hitting blocked opps"
+
+[node name="Bar" type="TextureRect" parent="HBoxContainer2"]
+unique_name_in_owner = true
+margin_right = 96.0
+margin_bottom = 40.0
+texture = ExtResource( 6 )
+
+[node name="AuricUI" parent="HBoxContainer2" instance=ExtResource( 3 )]
+unique_name_in_owner = true
+material = SubResource( 1 )
+position = Vector2( 49, 7 )
+
+[node name="Red" parent="HBoxContainer2" instance=ExtResource( 9 )]
+unique_name_in_owner = true
+visible = false
+material = SubResource( 2 )
+position = Vector2( 49, 15 )
+
+[node name="BarEffect2" parent="HBoxContainer2" instance=ExtResource( 10 )]
+unique_name_in_owner = true
+visible = false
+material = SubResource( 3 )
+position = Vector2( 49, 0 )

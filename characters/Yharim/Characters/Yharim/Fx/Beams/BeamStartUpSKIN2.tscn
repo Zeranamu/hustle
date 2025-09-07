@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://fx/ParticleEffect.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=2]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/flare1.png" type="Texture" id=3]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/T_BlurHextile005.png" type="Texture" id=4]
+
+[sub_resource type="ShaderMaterial" id=4]
+resource_local_to_scene = true
+shader = ExtResource( 2 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="Curve" id=1]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, 0.0, 0, 0, Vector2( 0.292079, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.217877, 0.541899 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 0.425781, 0.425781, 0.705882, 1, 1, 1, 0 )
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0.366337, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.455446, 3 ), 0.0, 0.0, 0, 0, Vector2( 0.475248, 0 ), 0.0, 0.0, 0, 0 ]
+
+[node name="BeamStartUp" instance=ExtResource( 1 )]
+material = SubResource( 4 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." index="1"]
+position = Vector2( 0, -26 )
+amount = 5
+explosiveness = 0.83
+texture = ExtResource( 3 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 211.38
+scale_amount = 2.0
+scale_amount_curve = SubResource( 1 )
+color_ramp = SubResource( 2 )
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="." index="2"]
+amount = 1
+texture = ExtResource( 4 )
+gravity = Vector2( 0, 0 )
+scale_amount = 3.0
+scale_amount_curve = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}

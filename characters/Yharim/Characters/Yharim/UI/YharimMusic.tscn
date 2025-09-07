@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://ui/ActionSelector/ActionUIData/ActionUIDataCheckButton.gd" type="Script" id=1]
+[ext_resource path="res://ui/ActionSelector/ActionUIData/ActionUIData.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Yharim/Characters/Yharim/UI/YharimMusicUI.gd" type="Script" id=3]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/WhiteBox.png" type="Texture" id=4]
+
+[sub_resource type="CanvasItemMaterial" id=6]
+blend_mode = 1
+
+[sub_resource type="Curve" id=3]
+min_value = 0.7
+max_value = 2.0
+_data = [ Vector2( 0, 0.7 ), 0.0, 0.0, 0, 0, Vector2( 0.282178, 1.16091 ), 0.0, 0.0, 0, 0, Vector2( 1, 1.32636 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.631285, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="Gradient" id=5]
+interpolation_mode = 1
+offsets = PoolRealArray( 0, 0.21229, 0.441341, 0.715084 )
+colors = PoolColorArray( 1, 0, 0, 1, 0, 0.953125, 1, 1, 0, 0.603149, 0.632812, 1, 0.453125, 0, 0, 1 )
+
+[node name="ActionUIData" instance=ExtResource( 2 )]
+margin_right = 169.0
+margin_bottom = 12.0
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." index="0"]
+material = SubResource( 6 )
+position = Vector2( 90, 6 )
+scale = Vector2( 1.2, 0.1 )
+amount = 4
+texture = ExtResource( 4 )
+gravity = Vector2( 0, 0 )
+scale_amount_curve = SubResource( 3 )
+color = Color( 1, 1, 1, 0.32549 )
+color_ramp = SubResource( 4 )
+color_initial_ramp = SubResource( 5 )
+
+[node name="Music" type="CheckButton" parent="." index="1"]
+margin_right = 50.0
+margin_bottom = 12.0
+hint_tooltip = "Turns on music"
+text = "Music"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BG" type="CheckButton" parent="." index="2"]
+margin_left = 51.0
+margin_right = 131.0
+margin_bottom = 12.0
+hint_tooltip = "Turns on crackling BG visuals"
+text = "Background"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="shh" type="CheckButton" parent="." index="3"]
+margin_left = 132.0
+margin_right = 178.0
+margin_bottom = 12.0
+hint_tooltip = "No yelling sound"
+text = "Quiet"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}

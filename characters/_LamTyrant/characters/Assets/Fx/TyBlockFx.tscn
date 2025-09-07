@@ -1,0 +1,125 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://fx/ParticleEffect.gd" type="Script" id=1]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=2]
+[ext_resource path="res://_LamTyrant/characters/Assets/Fx/TyShw1.png" type="Texture" id=3]
+[ext_resource path="res://_LamTyrant/characters/Assets/Fx/TyShw2.png" type="Texture" id=4]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 2 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=5]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=6]
+_data = [ Vector2( 0.0363924, 0 ), 0.0, 1.57515, 0, 0, Vector2( 0.390823, 0.622699 ), 0.670025, 0.670025, 0, 0, Vector2( 1, 0.855828 ), 0.0447893, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=7]
+offsets = PoolRealArray( 0, 0.815603 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="CanvasItemMaterial" id=8]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=9]
+_data = [ Vector2( 0, 0.242331 ), 0.0, 1.57515, 0, 0, Vector2( 0.416139, 0.720859 ), 0.687908, 0.687908, 0, 0, Vector2( 1, 0.855828 ), 0.0447893, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=10]
+offsets = PoolRealArray( 0, 0.815603 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[node name="ParticleEffect" type="Node2D"]
+material = SubResource( 1 )
+script = ExtResource( 1 )
+lifetime = 3.0
+
+[node name="CPUParticles2D7" type="CPUParticles2D" parent="."]
+modulate = Color( 0.0392157, 0.0588235, 0.235294, 0.439216 )
+material = SubResource( 5 )
+position = Vector2( 0, -4 )
+z_index = -2
+z_as_relative = false
+amount = 1
+lifetime = 2.0
+speed_scale = 7.0
+explosiveness = 1.0
+fract_delta = false
+local_coords = false
+texture = ExtResource( 3 )
+gravity = Vector2( 0, 0 )
+linear_accel = -100.0
+tangential_accel = 23.85
+angle = 720.0
+angle_random = 1.0
+scale_amount = 0.8
+scale_amount_curve = SubResource( 6 )
+color_ramp = SubResource( 7 )
+anim_speed = 2.0
+
+[node name="CPUParticles2D9" type="CPUParticles2D" parent="."]
+modulate = Color( 0.262745, 0.639216, 1, 0.419608 )
+material = SubResource( 8 )
+position = Vector2( 0, -4 )
+z_index = -2
+z_as_relative = false
+amount = 1
+lifetime = 1.5
+speed_scale = 6.0
+explosiveness = 1.0
+fract_delta = false
+local_coords = false
+texture = ExtResource( 4 )
+gravity = Vector2( 0, 0 )
+linear_accel = -100.0
+tangential_accel = 23.85
+angle = 720.0
+angle_random = 1.0
+scale_amount = 1.2
+scale_amount_curve = SubResource( 9 )
+color_ramp = SubResource( 10 )
+anim_speed = 2.0
+
+[node name="CPUParticles2D10" type="CPUParticles2D" parent="."]
+modulate = Color( 0.262745, 0.639216, 1, 0.419608 )
+material = SubResource( 8 )
+position = Vector2( 0, -4 )
+z_index = -2
+z_as_relative = false
+amount = 1
+lifetime = 1.5
+speed_scale = 6.0
+explosiveness = 1.0
+fract_delta = false
+local_coords = false
+texture = ExtResource( 4 )
+gravity = Vector2( 0, 0 )
+linear_accel = -100.0
+tangential_accel = 23.85
+angle = 720.0
+angle_random = 1.0
+scale_amount = 0.8
+scale_amount_curve = SubResource( 9 )
+color_ramp = SubResource( 10 )
+anim_speed = 2.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.064
+one_shot = true

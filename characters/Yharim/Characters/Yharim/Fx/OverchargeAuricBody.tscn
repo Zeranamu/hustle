@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=1]
+[ext_resource path="res://Yharim/Characters/Yharim/Fx/YharimBodylightning.png" type="Texture" id=2]
+[ext_resource path="res://fx/ParticleEffect.tscn" type="PackedScene" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=2]
+particles_animation = true
+particles_anim_h_frames = 9
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.614458, 0.849398 )
+colors = PoolColorArray( 0, 0.90625, 1, 1, 1, 1, 1, 1, 0, 0.519531, 0.519531, 1 )
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.620482, 0.885542 )
+colors = PoolColorArray( 1, 0, 0, 1, 1, 1, 1, 1, 0.648438, 0, 0, 1 )
+
+[node name="ChargeAuricBody" instance=ExtResource( 3 )]
+material = SubResource( 1 )
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="." index="1"]
+material = SubResource( 2 )
+scale = Vector2( 0.5, 0.5 )
+amount = 5
+lifetime = 0.34
+texture = ExtResource( 2 )
+emission_shape = 2
+emission_rect_extents = Vector2( 11, 22 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 10.0
+angle = 720.0
+angle_random = 1.0
+scale_amount = 0.2
+color = Color( 0, 0.901961, 0.996078, 0.654902 )
+color_initial_ramp = SubResource( 3 )
+anim_speed = 1.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." index="2"]
+material = SubResource( 2 )
+scale = Vector2( 0.5, 0.5 )
+amount = 5
+lifetime = 0.34
+texture = ExtResource( 2 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1, 22 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 10.0
+angle = 720.0
+angle_random = 1.0
+scale_amount = 0.5
+color = Color( 1, 0, 0, 0.654902 )
+color_initial_ramp = SubResource( 4 )
+anim_speed = 1.0
